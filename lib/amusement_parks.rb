@@ -13,12 +13,13 @@ class AmusementPark
     result
   end
 
-  def index_by_country
+  def group_by_country
     result = {}
     @data.each do |hash|
       key = hash[:country]
-      result[key] = [hash]
+        result[key] ||= []
+        result[key] << hash
+      end
+      result
     end
-    result
   end
-end

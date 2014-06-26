@@ -39,10 +39,9 @@ describe AmusementPark do
     }
 
     expect(input.index_by_id).to eq(expected)
-
   end
 
-  it 'parks can be indexed by Country' do
+  it 'parks can be grouped by Country' do
     data = [
       {
         :id=>546,
@@ -96,6 +95,6 @@ describe AmusementPark do
       ]
     }
 
-    expect(input.index_by_country).to eq(expected)
+    expect(input.group_by_country).to eq(expected)
   end
 end
